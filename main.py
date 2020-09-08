@@ -1,5 +1,12 @@
+# Password Generator
+# Generate Random Password and Protect your online privacy.
+# Passwords are not that secure, always use 2-Factor Authentication :)
+# Author : Thehackersbrain [Gaurav Raj]
+# Website : https://thehackersbrain.pythonanywhere.com/
+
 import random
 import argparse
+from termcolor import colored
 from sys import argv
 lower = "abcdefghijklmnopqrstuvwxyz"
 upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -23,7 +30,7 @@ hlp = """
 
 def passwd(length):
     password = "".join(random.sample(all, length))
-    print(f"{banner}\n\n  => Your Password : {password}")
+    print(f"{banner}\n\n  => Your Password : {colored(password, 'green')}")
 
 
 if __name__ == "__main__":
